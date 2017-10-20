@@ -1,3 +1,11 @@
+/*
+复写的TabHost方法基本思想：
+	 *1、 创建对象时，将其实体化，可创建任意多个滑动模块使用addTab()方法
+	 *2、ViewHold中的View贴图片
+	 *3、两个滑动模块实现连接与对话模块的分离
+	 * 
+	
+ */
 package com.example.cantoolapp;
 
 import android.content.Context;
@@ -25,6 +33,7 @@ public class AnimationTabHost extends TabHost{
 		//向右平移		
 		if(index > mCurrentTabID)
 		{
+			//判断动画开始点与当前位置的差值，index的值，在实体化时根据模块位置自己给定，使其就默认进入index=0的界面
         	 TranslateAnimation translateAnimation = new TranslateAnimation      
              (      // x和y轴的起始和结束位置  
                      Animation.RELATIVE_TO_SELF, 0f,       
@@ -32,7 +41,8 @@ public class AnimationTabHost extends TabHost{
                      Animation.RELATIVE_TO_SELF, 0f,      
                      Animation.RELATIVE_TO_SELF, 0f      
              );
-        	 translateAnimation.setDuration(durationMillis);      
+        	 translateAnimation.setDuration(durationMillis);  
+        	  //不写会造成松手滑回，注意    
              getCurrentView().startAnimation(translateAnimation); 
 		}
 		//向左平移
@@ -50,7 +60,7 @@ public class AnimationTabHost extends TabHost{
 		}
 		else
 		{
-			//when first entry, getCurrentView()==null, must notify it.
+			//开始是进入界面时什么都不做
 		}
 
 		super.setCurrentTab(index);
