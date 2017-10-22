@@ -60,6 +60,7 @@ public class chatActivity extends Activity implements OnItemClickListener ,OnCli
 	public static final String PROTOCOL_SCHEME_RFCOMM = "btspp";
 	public static final String PROTOCOL_SCHEME_BT_OBEX = "btgoep";
 	public static final String PROTOCOL_SCHEME_TCP_OBEX = "tcpobex";
+	String s;
 	
 	private BluetoothServerSocket mserverSocket = null;
 	private ServerThread startServerThread = null;
@@ -88,28 +89,21 @@ public class chatActivity extends Activity implements OnItemClickListener ,OnCli
         try{
         	 inputStream1 = getAssets().open("canmsg-sample.txt"); 
         	 inputStream2 = getAssets().open("Comfort.txt");
-//        	 inputStream3 = getAssets().open("PowerTrain.txt");
         	 int size1 = inputStream1.available();    
              int len1 = -1;  
              int size2 = inputStream2.available();    
              int len2 = -1;  
-             int size3 = inputStream3.available();    
-             int len3 = -1;  
              byte[] bytes1 = new byte[size1];   
              byte[] bytes2 = new byte[size2]; 
-//             byte[] bytes3 = new byte[size3]; 
              inputStream1.read(bytes1);    
              inputStream1.close();
              inputStream2.read(bytes2);    
              inputStream2.close();
-//             inputStream3.read(bytes3);    
-//             inputStream3.close();
              String string = new String(bytes1); 
              string += new String(bytes2);
-//             string += new String(bytes3);
              CanDB canDB = new CanDB(string); 
 //             int size = canDB.getCanDbc().size();
-//             
+             
 //             CanToPhy canToPhy = new CanToPhy();
 //             CanMsgValue canmsg = canToPhy.getMessageValue("t03D80000000000000000");
 //             String name = canmsg.getName();
@@ -175,14 +169,19 @@ public class chatActivity extends Activity implements OnItemClickListener ,OnCli
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				//s×Ö·û´®µÄ·Ö¸î
-				String s="t03D80000000000000000\rt39380000160000000000\r";
+				s="t31D80200000000000000";
+				String temp = s;
 				String[] split=s.split("\r");
-				for(String str : split){						
-					stringList.add(str);
-					Log.e("str", str);
-					canMsgValue = cantophy.getMessageValue(str);
-					
-					canMsgValuelist.add(canMsgValue);
+				for(String str : split){	
+					str = str.trim();
+					if((str.substring(0,1).equals("t") && str.length() == 21)|| (str.substring(0,1).equals("T") && str.length() == 26))
+					{
+						stringList.add(str);
+						Log.e("str", str);
+						canMsgValue = cantophy.getMessageValue(str);
+						
+						canMsgValuelist.add(canMsgValue);
+					}
 				}
 				
 				Intent intent = new Intent(chatActivity.this,TotalShowActivity.class);
@@ -438,7 +437,7 @@ public class chatActivity extends Activity implements OnItemClickListener ,OnCli
 				    	{
 				    		buf_data[i] = buffer[i];
 				    	}
-						String s = new String(buf_data);
+						s = new String(buf_data);
 						Message msg = new Message();
 						msg.obj = s;
 						msg.what = 1;

@@ -1,12 +1,10 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="${relativePackage}.${activityClass}" >
 
-    <RelativeLayout 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+   
         
        <RelativeLayout 
            android:id="@+id/rl1"
@@ -25,6 +23,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_toRightOf="@+id/tv1"
+               android:layout_marginLeft="10dp"
                android:text="读取中。。。"/>
            
        </RelativeLayout> 
@@ -47,6 +46,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_toRightOf="@+id/tv3"
+                android:layout_marginLeft="10dp"
                android:text="读取中。。。"/>
            
        </RelativeLayout> 
@@ -69,6 +69,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_toRightOf="@+id/tv5"
+                android:layout_marginLeft="10dp"
                android:text="读取中。。。"/>
            
        </RelativeLayout> 
@@ -91,6 +92,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_toRightOf="@+id/tv7"
+                android:layout_marginLeft="10dp"
                android:text="读取中。。。"/>
            
        </RelativeLayout> 
@@ -112,6 +114,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_toRightOf="@+id/tv9"
+                android:layout_marginLeft="10dp"
                android:text="读取中。。。"/>
            
        </RelativeLayout> 
@@ -121,7 +124,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:layout_below="@+id/rl5" >
-</ListView>
-    </RelativeLayout>
+ 		</ListView>
+  
 
-</ScrollView>
+</RelativeLayout>
