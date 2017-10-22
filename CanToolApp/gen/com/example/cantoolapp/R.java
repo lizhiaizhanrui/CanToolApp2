@@ -155,8 +155,8 @@ containing a value of this type.
         public static final int signalminValue_tv=0x7f09003c;
         public static final int signalmin_tv=0x7f09003b;
         public static final int signalname_tv=0x7f090039;
-        public static final int start_seach=0x7f090034;
-        public static final int start_service=0x7f090033;
+        public static final int start_seach=0x7f090033;
+        public static final int start_service=0x7f090034;
         public static final int tabbluetooth=0x7f090023;
         public static final int tabdata=0x7f090026;
         public static final int textView1=0x7f090025;
