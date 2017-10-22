@@ -7,7 +7,7 @@ import java.util.Map;
 public class PhyToCan {
 	public CanDB canDB;
 	
-	PhyToCan()
+	public PhyToCan()
 	{
 		canDB = new CanDB();
 	}
