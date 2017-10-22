@@ -44,7 +44,6 @@ public class Bluetooth extends TabActivity {
         		}
         	}         
         });
-        //默认在0界面
         mTabHost.setCurrentTab(0); 
     }
 	  public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -58,12 +57,10 @@ public class Bluetooth extends TabActivity {
     	    	    
         super.onDestroy();
     }      
-    //消息类型
 	public class SiriListItem {
 		String message;
-		boolean isSiri;//参数=0为发送的数据，=1为接受的数据
+		boolean isSiri;
 
-        
 		public SiriListItem(String msg, boolean siri) {
 			message = msg;
 			isSiri = siri;

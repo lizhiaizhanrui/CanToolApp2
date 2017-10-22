@@ -121,6 +121,7 @@ public class CanToPhy {
 			 id = message.substring(1,9);
 			
 		 }
+		 int size1 = mapDbc.size();
 		 CanMessage msgModel = mapDbc.get(String.valueOf(Integer.parseInt(id,16)));
 		 int size = mapDbc.size();
 		 msgValue.setId(id);

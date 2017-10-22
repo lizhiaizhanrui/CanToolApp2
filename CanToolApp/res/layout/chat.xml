@@ -39,16 +39,21 @@
 	     android:layout_width="match_parent"
 	     android:layout_height="50dp"
 	     android:id="@+id/button_jump"
-	     android:text="show"
+	     android:text="显示"
 	    android:layout_alignParentTop="true"
 	    />
-	    
+	   <Button 
+	       android:layout_width="match_parent"
+	       android:layout_height="50dp"
+	       android:id="@+id/button_set"
+	       android:text="设定"
+	       android:layout_below="@id/button_jump"/> 
 	 <ListView
 	     android:id="@+id/list"
 	     android:layout_width="fill_parent"
 	     android:layout_height="wrap_content"
 	     android:layout_alignParentLeft="true"
-	     android:layout_below="@+id/button_jump"
+	     android:layout_below="@+id/button_set"
 	     android:divider="#ffc6c6c6"
 	     android:scrollingCache="false" >
 	 </ListView>
