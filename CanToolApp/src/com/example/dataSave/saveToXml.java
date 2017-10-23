@@ -27,7 +27,7 @@ import android.R.integer;
 import com.example.dataAnalysis.CanMsgValue;
 import com.example.dataAnalysis.SignalValue;
  
-/*把CanMsgValue对象保存为xml文件*/
+/*把CanMsgValue对象保存到xml文件*/
 public class saveToXml {
 	public CanMsgValue canmsgvalue;
 	
@@ -60,15 +60,12 @@ public class saveToXml {
 	            
 	            
 	            Element c1=doc.createElement("canmsgvalue");
-//	            Element p2=doc.createElement("canmsgvalue");
 	            Attr id1=doc.createAttribute("id");
 //	            Attr id2=doc.createAttribute("id");
 	            id1.setNodeValue(id);
 //	            id2.setNodeValue("2");
 	            Element name1=doc.createElement("name");
 	            Text na1=doc.createTextNode(name);
-//	            Element name2=doc.createElement("name");
-//	            Text na2=doc.createTextNode("龙大爷");
 	            Element dlc1=doc.createElement("DLC");
 	            Text dl1=doc.createTextNode( String.valueOf(DLC));
 //	            Element sex2=doc.createElement("sex");
