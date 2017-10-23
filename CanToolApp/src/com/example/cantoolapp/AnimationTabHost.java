@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.TabHost;
-
+//动画效果
 public class AnimationTabHost extends TabHost{
 	
 	private int mCurrentTabID = 0;//当前的tabID
