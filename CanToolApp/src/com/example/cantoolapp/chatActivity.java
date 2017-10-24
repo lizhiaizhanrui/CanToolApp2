@@ -226,11 +226,11 @@ public class chatActivity extends Activity implements OnItemClickListener ,OnCli
     };    
     
     @Override
-    public synchronized void onPause() {
+    public  void onPause() {
         super.onPause();
     }
     @Override
-    public synchronized void onResume() {
+    public  void onResume() {
         super.onResume();
         if(Bluetooth.isOpen)
         {
