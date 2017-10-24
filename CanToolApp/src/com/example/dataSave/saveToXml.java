@@ -153,7 +153,8 @@ public class saveToXml {
 //	                        sex2.appendChild(se2);
 	                        
 	            try {
-	                FileOutputStream fos=new FileOutputStream(new File("E://longdada.xml"));
+	                //FileOutputStream fos=new FileOutputStream(new File("E://longdada.xml"));
+	            	FileOutputStream fos=new FileOutputStream(new File("data/data/com.example.dataSave/longdada.xml"));
 	                 
 	                try {
 	                    ((org.apache.crimson.tree.XmlDocument)doc)

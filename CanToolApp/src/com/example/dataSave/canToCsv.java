@@ -10,7 +10,8 @@ public class canToCsv {
 	public static void saveToCsv(String str){
 		 try {  
 			    String canStr=str;
-	            File csv = new File("E://canMessage.csv"); // CSV文件  
+			    //File csv = new File("E://canMessage.csv"); // CSV文件  
+			    File csv = new File("data/data/com.example.dataSave/canMessage.csv");
 	            // 追记模式  
 	            BufferedWriter bw = new BufferedWriter(new FileWriter(csv, true));  
 	            // 新增一行数据  
