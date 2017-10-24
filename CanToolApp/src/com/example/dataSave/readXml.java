@@ -30,7 +30,7 @@ public class readXml {
         try {
         	//CanMsgValue canmsgvalue1;
             // 通过reader对象的read方法加载xml文件,获取docuemnt对象。
-            Document document = reader.read(new File("E://longdada.xml"));
+            Document document = reader.read(new File("data/data/com.example.dataSave/longdata.xml"));
             // 通过document对象获取根节点canmsgvalues
             Element canmsgvalues = document.getRootElement();
             // 通过element对象的elementIterator方法获取迭代器
